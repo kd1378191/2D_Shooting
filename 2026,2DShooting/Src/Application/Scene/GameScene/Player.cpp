@@ -5,7 +5,7 @@ void Player::Init()
 	m_pos = { 0,-100 };
 }
 
-void Player::Update()
+void Player::Action()
 {
 	if (GetAsyncKeyState('W') & 0x8000) { m_pos.y += m_speed; }
 	if (GetAsyncKeyState('S') & 0x8000) { m_pos.y -= m_speed; }
@@ -16,6 +16,11 @@ void Player::Update()
 	if (m_pos.y < -360 + 32) { m_pos.y = -360 + 32; }
 	else if (m_pos.y > 360 - 32) { m_pos.y = 360 - 32; }
 
+
+}
+
+void Player::Update()
+{
 	m_mat = Math::Matrix::CreateTranslation(m_pos.x,m_pos.y,1.0f);
 
 }

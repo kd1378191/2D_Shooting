@@ -7,6 +7,7 @@ public:
 	~Player(){}
 
 	void Init();
+	void Action();
 	void Update();
 	void Draw();
 
