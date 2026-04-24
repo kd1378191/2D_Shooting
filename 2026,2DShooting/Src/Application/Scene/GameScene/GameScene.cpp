@@ -7,8 +7,6 @@
 void GameScene::Init()
 {
 	// 画像の読み込み処理
-	playerTex.Load("Texture/player.png");
-	enemyTex.Load("Texture/enemy.png");
 	bulletTex.Load("Texture/bullet.png");
 	expTex.Load("Texture/explosion.png");
 	backTex.Load("Texture/back.png");
@@ -19,9 +17,6 @@ void GameScene::Init()
 	m_enemy = new Enemy();
 	m_enemy->Init();
 
-	// テクスチャセット
-	m_player->SetTex(&playerTex);
-	m_enemy->SetTex(&enemyTex);
 }
 
 void GameScene::Update()
@@ -71,8 +66,6 @@ void GameScene::Draw()
 void GameScene::Release()
 {
 	// 画像の解放処理
-	playerTex.Release();
-	enemyTex.Release();
 	bulletTex.Release();
 	expTex.Release();
 	backTex.Release();

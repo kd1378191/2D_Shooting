@@ -2,6 +2,9 @@
 
 void Enemy::Init()
 {
+	// 画像の読み込み処理
+	m_tex.Load("Texture/enemy.png");
+
 	m_animCnt = 0.0f;
 	m_pos.x = (rand() % 1280) - 640;
 	m_pos.y = 360 + 32+ (rand() % 360);
@@ -30,5 +33,11 @@ void Enemy::Update()
 void Enemy::Draw()
 {
 	SHADER.m_spriteShader.SetMatrix(m_mat);
-	SHADER.m_spriteShader.DrawTex(m_tex, Math::Rectangle{ 0,0,64,64 }, 1.0f);
+	SHADER.m_spriteShader.DrawTex(&m_tex, Math::Rectangle{ 0,0,64,64 }, 1.0f);
+}
+
+void Enemy::Release()
+{
+	// 画像の解放処理
+	m_tex.Release();
 }
