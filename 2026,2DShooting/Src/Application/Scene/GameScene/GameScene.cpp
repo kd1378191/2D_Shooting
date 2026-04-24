@@ -1,4 +1,6 @@
 #include "GameScene.h"
+#include "../Scene.h"
+//各オブジェクトのヘッダ―をインクルード
 #include "../../Object/Player/Player.h"
 #include "../../Object/Enemy/Enemy.h"
 
@@ -32,6 +34,11 @@ void GameScene::Update()
 	if (backY < -720)
 	{
 		backY = 0;
+	}
+
+	if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+	{
+		Scene::GetInstance().SetNextScene(Scene::SceneType::Title);
 	}
 	
 	//背景

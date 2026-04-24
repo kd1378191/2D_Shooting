@@ -1,35 +1,13 @@
-#include "main.h"
+#include "../main.h"
 #include "Scene.h"
-#include "Scene/GameScene/GameScene.h"
+//各シーンのヘッダ―をインクルード
+#include"TitleScene/TitleScene.h"
+#include"GameScene/GameScene.h"
 
 void Scene::Draw2D()
 {
 	//先に書いたものから描画される
-
-	switch (sceneID)
-	{
-	case 0://title
-		break;
-
-	case 1://game
-		m_gameScene->Draw();
-		break;
-
-	case 2://gameover
-
-		break;
-
-	case 3://clear
-		break;
-
-	case 4:
-		break;
-
-	default:
-		break;
-	}
-
-
+	m_currentScene->Draw();
 
 
 	////自機の描画
@@ -85,9 +63,24 @@ void Scene::Draw2D()
 
 }
 
+void Scene::PreUpdate()
+{
+	//シーン切替
+	if (m_currentSceneType != m_nextSceneType)
+	{
+		ChangeScene(m_nextSceneType);
+	}
+}
+
 //1秒間に60回のペースで繰り返される(60fps)
 void Scene::Update()
 {
+	//シーン切替の処理
+	PreUpdate();
+
+
+	m_currentScene->Update();
+
 
 	//	if (playerX > 640 - 32)
 	//	{
@@ -340,30 +333,6 @@ void Scene::Update()
 
 	//bossMat = scale * rotate * trans;//拡縮 * 回転 * 移動 
 	////bossMat = scale * trans;//拡縮 * 移動　の順番!
-switch (sceneID)
-{
-case 0://title
-	break;
-
-case 1://game
-	m_gameScene->Update();
-	break;
-
-case 2://gameover
-
-	break;
-
-case 3://clear
-	break;
-
-case 4:
-	break;
-
-default:
-	break;
-}
-
-
 
 
 }
@@ -371,8 +340,11 @@ default:
 //最初の1フレームで実行される
 void Scene::Init()//ここはゲーム開始したとき最初に一度だけ実行される
 {
+
+	ChangeScene(m_currentSceneType);
+
 	//乱数の初期化(＊必ずInitに1度だけ書く)
-	srand(time(0));
+	//srand(time(0));
 	// 画像の読み込み処理
 	//charaTex.Load("Texture/player.png");
 	//enemyTex.Load("Texture/enemy.png");
@@ -416,11 +388,6 @@ void Scene::Init()//ここはゲーム開始したとき最初に一度だけ実
 	//bossHp = 10;
 	//bossAngle = 0;
 
-	sceneID = 0;
-
-	m_gameScene = new GameScene();
-	m_gameScene->Init();
-
 }
 
 //最後の1フレームで実行される
@@ -433,11 +400,7 @@ void Scene::Release()
 	//expTex.Release();
 	//backTex.Release();
 
-	if (m_gameScene)
-	{
-		delete m_gameScene;
-		m_gameScene = nullptr;
-	}
+
 }
 
 void Scene::ImGuiUpdate()
@@ -453,6 +416,33 @@ void Scene::ImGuiUpdate()
 		ImGui::Text("FPS : %d", APP.m_fps);
 	}
 	ImGui::End();
+}
+
+void Scene::ChangeScene(SceneType _sceneType)
+{
+	//次のシーンを作成
+	switch (_sceneType)
+	{
+	case SceneType::Title:
+		m_currentScene = std::make_shared<TitleScene>();
+		break;
+
+	case SceneType::Game:
+		m_currentScene = std::make_shared<GameScene>();
+		break;
+
+	case SceneType::GameOver:
+		//m_currentScene = std::make_shared<GameOverScene>();
+		break;
+
+	case SceneType::Clear:
+		//m_currentScene = std::make_shared<ClearScene>();
+		break;
+
+	}
+
+	//フラグを更新
+	m_currentSceneType = _sceneType;
 }
 
 //void Scene::Reset()

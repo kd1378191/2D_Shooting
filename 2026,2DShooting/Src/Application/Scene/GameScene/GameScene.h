@@ -1,21 +1,24 @@
 #pragma once
 
+//継承
+#include"../BaseScene/BaseScene.h"
+
 class Player;
 class Enemy;
 
-class GameScene
+class GameScene : public BaseScene
 {
 	public:
-	GameScene(){}
+	GameScene(){ Init(); }
 	~GameScene() { Release(); }
-	void Init();
-	void Update();
-	void Draw();
+	void Init()override;
+	void Update()override;
+	void Draw()override;
 	
 
 private:
 
-	void Release();
+	void Release()override;
 
 	KdTexture playerTex;
 	KdTexture enemyTex;
