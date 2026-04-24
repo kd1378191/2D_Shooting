@@ -1,6 +1,6 @@
 #include "GameScene.h"
-#include "Player.h"
-#include "Enemy.h"
+#include "../../Object/Player/Player.h"
+#include "../../Object/Enemy/Enemy.h"
 
 void GameScene::Init()
 {
@@ -10,6 +10,7 @@ void GameScene::Init()
 	bulletTex.Load("Texture/bullet.png");
 	expTex.Load("Texture/explosion.png");
 	backTex.Load("Texture/back.png");
+
 	// ‰Šú‰»
 	m_player = new Player();
 	m_player->Init();
@@ -27,6 +28,16 @@ void GameScene::Update()
 	m_player->Action();
 	m_enemy->Action();
 
+	backY -= 3;
+	if (backY < -720)
+	{
+		backY = 0;
+	}
+	
+	//”wŒi
+	backMat1 = Math::Matrix::CreateTranslation(0, backY, 0);
+	backMat2 = Math::Matrix::CreateTranslation(0, backY + 720, 0);
+
 	//XV
 	m_player->Update();
 	m_enemy->Update();
@@ -34,8 +45,20 @@ void GameScene::Update()
 
 void GameScene::Draw()
 {
+
+	//æ‚É‘‚¢‚½‚à‚Ì‚©‚ç•`‰æ‚³‚ê‚é
+
+	//”wŒi‚Ì•`‰æ(1–‡–Ú)
+	SHADER.m_spriteShader.SetMatrix(backMat1);
+	SHADER.m_spriteShader.DrawTex(&backTex, Math::Rectangle{ 0,0,1280,720 }, 1.0f);
+
+	//”wŒi(2–‡–Ú)
+	SHADER.m_spriteShader.SetMatrix(backMat2);
+	SHADER.m_spriteShader.DrawTex(&backTex, Math::Rectangle{ 0,0,1280,720 }, 1.0f);
+
 	//•`‰æ
 	m_player->Draw();
+	m_enemy->Draw();
 }
 
 void GameScene::Release()

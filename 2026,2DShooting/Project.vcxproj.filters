@@ -7,47 +7,56 @@
     <Filter Include="Src">
       <UniqueIdentifier>{80d0a5a9-6779-4863-bede-cc22a4986dc5}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Src\System">
-      <UniqueIdentifier>{f5928314-3ee2-4e39-abfa-d93aa9ee5891}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\System\Direct3D">
-      <UniqueIdentifier>{f193abd5-e51c-466e-a937-722bc9175e9a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\System\Utility">
-      <UniqueIdentifier>{f5d733b1-5031-4659-a9d4-0dd3add1e5fb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\System\Window">
-      <UniqueIdentifier>{cb022f2a-c5a2-449b-9b70-5110aff8550f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Library\imgui">
       <UniqueIdentifier>{85e2ada7-3d34-4892-b70a-8b9a433f7438}</UniqueIdentifier>
     </Filter>
     <Filter Include="Library\tinygltf">
       <UniqueIdentifier>{307bfbcd-124f-4ad7-85f5-3fd94f814b1f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Src\System\Shader">
-      <UniqueIdentifier>{93543c0c-58fe-4a94-8279-7be3021b65b1}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\System\Shader\EffectShader">
-      <UniqueIdentifier>{3ed945a9-befa-4db2-b780-7714e82626ed}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\System\Shader\SpriteShader">
-      <UniqueIdentifier>{2da4d471-f4e8-4b2d-bdef-b93f91523b8b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\System\Shader\StandardShader">
-      <UniqueIdentifier>{0a93a6dd-bb60-46dc-820f-6aea10b3b02f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Src\Application">
       <UniqueIdentifier>{d0d0f9cf-dabd-4346-bc9a-d9c04cf42372}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Src\System\Audio">
-      <UniqueIdentifier>{667d1cb1-5ae5-476f-acd5-14b7d294a95a}</UniqueIdentifier>
     </Filter>
     <Filter Include="Src\Application\Scene">
       <UniqueIdentifier>{09b98f62-467c-45bd-ad46-38e4bdb2538f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Src\Application\Scene\GameScene">
       <UniqueIdentifier>{23c7f699-eb75-4340-a5f8-28fdf743f58d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object">
+      <UniqueIdentifier>{52b931a7-a0bd-4cae-9579-19277be59e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Player">
+      <UniqueIdentifier>{73c40c2e-7627-435b-ad41-94a8d93b404e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Enemy">
+      <UniqueIdentifier>{99ade42f-90eb-4186-a2ba-6cb348427575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System">
+      <UniqueIdentifier>{f5928314-3ee2-4e39-abfa-d93aa9ee5891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System\Direct3D">
+      <UniqueIdentifier>{f193abd5-e51c-466e-a937-722bc9175e9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System\Utility">
+      <UniqueIdentifier>{f5d733b1-5031-4659-a9d4-0dd3add1e5fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System\Window">
+      <UniqueIdentifier>{cb022f2a-c5a2-449b-9b70-5110aff8550f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System\Shader">
+      <UniqueIdentifier>{93543c0c-58fe-4a94-8279-7be3021b65b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System\Shader\EffectShader">
+      <UniqueIdentifier>{3ed945a9-befa-4db2-b780-7714e82626ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System\Shader\SpriteShader">
+      <UniqueIdentifier>{2da4d471-f4e8-4b2d-bdef-b93f91523b8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System\Shader\StandardShader">
+      <UniqueIdentifier>{0a93a6dd-bb60-46dc-820f-6aea10b3b02f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\System\Audio">
+      <UniqueIdentifier>{667d1cb1-5ae5-476f-acd5-14b7d294a95a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -97,46 +106,46 @@
       <Filter>Src\Application</Filter>
     </ClInclude>
     <ClInclude Include="src\System\Direct3D\KdDirect3D.h">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClInclude>
     <ClInclude Include="src\System\Direct3D\KdModel.h">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClInclude>
     <ClInclude Include="src\System\Direct3D\KdTexture.h">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClInclude>
     <ClInclude Include="src\System\Direct3D\KdBuffer.h">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClInclude>
     <ClInclude Include="Src\System\Direct3D\KdDirect3DHelper.h">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClInclude>
     <ClInclude Include="Src\System\Audio\KdAudio.h">
-      <Filter>Src\System\Audio</Filter>
+      <Filter>Src\Application\System\Audio</Filter>
     </ClInclude>
     <ClInclude Include="Src\System\Direct3D\KdGLTFLoader.h">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClInclude>
     <ClInclude Include="Src\System\Shader\KdShaderManager.h">
-      <Filter>Src\System\Shader</Filter>
+      <Filter>Src\Application\System\Shader</Filter>
     </ClInclude>
     <ClInclude Include="Src\System\Shader\EffectShader\KdEffectShader.h">
-      <Filter>Src\System\Shader\EffectShader</Filter>
+      <Filter>Src\Application\System\Shader\EffectShader</Filter>
     </ClInclude>
     <ClInclude Include="Src\System\Shader\SpriteShader\KdSpriteShader.h">
-      <Filter>Src\System\Shader\SpriteShader</Filter>
+      <Filter>Src\Application\System\Shader\SpriteShader</Filter>
     </ClInclude>
     <ClInclude Include="Src\System\Shader\StandardShader\KdStandardShader.h">
-      <Filter>Src\System\Shader\StandardShader</Filter>
+      <Filter>Src\Application\System\Shader\StandardShader</Filter>
     </ClInclude>
     <ClInclude Include="src\System\Utility\KdUtility.h">
-      <Filter>Src\System\Utility</Filter>
+      <Filter>Src\Application\System\Utility</Filter>
     </ClInclude>
     <ClInclude Include="src\System\Window\KdGameWindow.h">
-      <Filter>Src\System\Window</Filter>
+      <Filter>Src\Application\System\Window</Filter>
     </ClInclude>
     <ClInclude Include="src\System\KdSystem.h">
-      <Filter>Src\System</Filter>
+      <Filter>Src\Application\System</Filter>
     </ClInclude>
     <ClInclude Include="..\Library\strconv.h">
       <Filter>Library</Filter>
@@ -144,14 +153,14 @@
     <ClInclude Include="Src\Application\Scene.h">
       <Filter>Src\Application</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Scene\GameScene\Enemy.h">
-      <Filter>Src\Application\Scene\GameScene</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h">
       <Filter>Src\Application\Scene\GameScene</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Scene\GameScene\Player.h">
-      <Filter>Src\Application\Scene\GameScene</Filter>
+    <ClInclude Include="Src\Application\Object\Enemy\Enemy.h">
+      <Filter>Src\Application\Object\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Player\Player.h">
+      <Filter>Src\Application\Object\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -180,52 +189,52 @@
       <Filter>Src\Application</Filter>
     </ClCompile>
     <ClCompile Include="src\System\Direct3D\KdDirect3D.cpp">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClCompile>
     <ClCompile Include="src\System\Direct3D\KdModel.cpp">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClCompile>
     <ClCompile Include="src\System\Direct3D\KdTexture.cpp">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClCompile>
     <ClCompile Include="src\System\Direct3D\KdBuffer.cpp">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClCompile>
     <ClCompile Include="Src\System\Direct3D\KdDirect3DHelper.cpp">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClCompile>
     <ClCompile Include="Src\System\Audio\KdAudio.cpp">
-      <Filter>Src\System\Audio</Filter>
+      <Filter>Src\Application\System\Audio</Filter>
     </ClCompile>
     <ClCompile Include="Src\System\Direct3D\KdGLTFLoader.cpp">
-      <Filter>Src\System\Direct3D</Filter>
+      <Filter>Src\Application\System\Direct3D</Filter>
     </ClCompile>
     <ClCompile Include="Src\System\Shader\KdShaderManager.cpp">
-      <Filter>Src\System\Shader</Filter>
+      <Filter>Src\Application\System\Shader</Filter>
     </ClCompile>
     <ClCompile Include="Src\System\Shader\EffectShader\KdEffectShader.cpp">
-      <Filter>Src\System\Shader\EffectShader</Filter>
+      <Filter>Src\Application\System\Shader\EffectShader</Filter>
     </ClCompile>
     <ClCompile Include="Src\System\Shader\SpriteShader\KdSpriteShader.cpp">
-      <Filter>Src\System\Shader\SpriteShader</Filter>
+      <Filter>Src\Application\System\Shader\SpriteShader</Filter>
     </ClCompile>
     <ClCompile Include="Src\System\Shader\StandardShader\KdStandardShader.cpp">
-      <Filter>Src\System\Shader\StandardShader</Filter>
+      <Filter>Src\Application\System\Shader\StandardShader</Filter>
     </ClCompile>
     <ClCompile Include="src\System\Window\KdGameWindow.cpp">
-      <Filter>Src\System\Window</Filter>
+      <Filter>Src\Application\System\Window</Filter>
     </ClCompile>
     <ClCompile Include="Src\Application\Scene.cpp">
       <Filter>Src\Application</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Scene\GameScene\Enemy.cpp">
-      <Filter>Src\Application\Scene\GameScene</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp">
       <Filter>Src\Application\Scene\GameScene</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Scene\GameScene\Player.cpp">
-      <Filter>Src\Application\Scene\GameScene</Filter>
+    <ClCompile Include="Src\Application\Object\Enemy\Enemy.cpp">
+      <Filter>Src\Application\Object\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Player\Player.cpp">
+      <Filter>Src\Application\Object\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -233,36 +242,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Src\System\Shader\EffectShader\inc_KdEffectShader.hlsli">
-      <Filter>Src\System\Shader\EffectShader</Filter>
+      <Filter>Src\Application\System\Shader\EffectShader</Filter>
     </None>
     <None Include="Src\System\Shader\inc_KdCommon.hlsli">
-      <Filter>Src\System\Shader</Filter>
+      <Filter>Src\Application\System\Shader</Filter>
     </None>
     <None Include="Src\System\Shader\SpriteShader\inc_KdSpriteShader.hlsli">
-      <Filter>Src\System\Shader\SpriteShader</Filter>
+      <Filter>Src\Application\System\Shader\SpriteShader</Filter>
     </None>
     <None Include="Src\System\Shader\StandardShader\inc_KdStandardShader.hlsli">
-      <Filter>Src\System\Shader\StandardShader</Filter>
+      <Filter>Src\Application\System\Shader\StandardShader</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Src\System\Shader\EffectShader\KdEffectShader_PS.hlsl">
-      <Filter>Src\System\Shader\EffectShader</Filter>
+      <Filter>Src\Application\System\Shader\EffectShader</Filter>
     </FxCompile>
     <FxCompile Include="Src\System\Shader\EffectShader\KdEffectShader_VS.hlsl">
-      <Filter>Src\System\Shader\EffectShader</Filter>
+      <Filter>Src\Application\System\Shader\EffectShader</Filter>
     </FxCompile>
     <FxCompile Include="Src\System\Shader\SpriteShader\KdSpriteShader_PS.hlsl">
-      <Filter>Src\System\Shader\SpriteShader</Filter>
+      <Filter>Src\Application\System\Shader\SpriteShader</Filter>
     </FxCompile>
     <FxCompile Include="Src\System\Shader\SpriteShader\KdSpriteShader_VS.hlsl">
-      <Filter>Src\System\Shader\SpriteShader</Filter>
+      <Filter>Src\Application\System\Shader\SpriteShader</Filter>
     </FxCompile>
     <FxCompile Include="Src\System\Shader\StandardShader\KdStandardShader_PS.hlsl">
-      <Filter>Src\System\Shader\StandardShader</Filter>
+      <Filter>Src\Application\System\Shader\StandardShader</Filter>
     </FxCompile>
     <FxCompile Include="Src\System\Shader\StandardShader\KdStandardShader_VS.hlsl">
-      <Filter>Src\System\Shader\StandardShader</Filter>
+      <Filter>Src\Application\System\Shader\StandardShader</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>
