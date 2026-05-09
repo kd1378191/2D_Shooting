@@ -14,8 +14,11 @@ void GameScene::Init()
 	// ‰Šú‰»
 	m_player = new Player();
 	m_player->Init();
-	m_enemy = new Enemy();
-	m_enemy->Init();
+	m_enemy = new Enemy[m_enemyNum];
+	for (int i = 0; i < m_enemyNum; i++)
+	{
+		m_enemy[i].Init();
+	}
 
 }
 
@@ -23,7 +26,10 @@ void GameScene::Update()
 {
 	//XVˆ—
 	m_player->Action();
-	m_enemy->Action();
+	for (int i = 0; i < m_enemyNum; i++)
+	{
+		m_enemy[i].Action();
+	}
 
 	backY -= 3;
 	if (backY < -720)
@@ -31,9 +37,13 @@ void GameScene::Update()
 		backY = 0;
 	}
 
-	if (GetAsyncKeyState(VK_SPACE) & 0x8000)
+	if (GetAsyncKeyState('1') & 0x8000)
 	{
-		Scene::GetInstance().SetNextScene(Scene::SceneType::Title);
+		Scene::GetInstance().SetNextScene(Scene::SceneType::GameOver);
+	}
+	if (GetAsyncKeyState('2') & 0x8000)
+	{
+		Scene::GetInstance().SetNextScene(Scene::SceneType::Clear);
 	}
 	
 	//”wŒi
@@ -42,7 +52,10 @@ void GameScene::Update()
 
 	//XV
 	m_player->Update();
-	m_enemy->Update();
+	for (int i = 0; i < m_enemyNum; i++)
+	{
+		m_enemy[i].Update();
+	}
 }
 
 void GameScene::Draw()
@@ -60,7 +73,10 @@ void GameScene::Draw()
 
 	//•`‰æ
 	m_player->Draw();
-	m_enemy->Draw();
+	for (int i = 0; i < m_enemyNum; i++)
+	{
+		m_enemy[i].Draw();
+	}
 }
 
 void GameScene::Release()

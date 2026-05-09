@@ -1,5 +1,7 @@
 #pragma once
 
+class PlayerBullet;
+
 class Player
 {
 public:
@@ -20,4 +22,6 @@ private:
 	Math::Vector2 m_pos;
 	Math::Matrix m_mat;
 	KdTexture m_tex;
+
+	PlayerBullet* m_bullet;
 };

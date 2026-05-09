@@ -12,6 +12,7 @@ public:
 		Game,
 		GameOver,
 		Clear,
+		Score,
 	};
 
 	void SetNextScene(SceneType _nextScene)

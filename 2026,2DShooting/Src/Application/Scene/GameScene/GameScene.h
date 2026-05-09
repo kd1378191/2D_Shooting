@@ -20,8 +20,7 @@ private:
 
 	void Release()override;
 
-	KdTexture playerTex;
-	KdTexture enemyTex;
+
 	KdTexture bulletTex;
 	KdTexture expTex;
 	KdTexture backTex;
@@ -33,5 +32,8 @@ private:
 
 	Player* m_player;
 	Enemy* m_enemy;
+	static const int m_enemyNum = 5;
+	
+
 
 };
