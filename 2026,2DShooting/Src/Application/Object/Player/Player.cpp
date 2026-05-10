@@ -12,14 +12,34 @@ void Player::Init()
 
 void Player::Action()
 {
-	if (GetAsyncKeyState('W') & 0x8000) { m_pos.y += m_speed; }
-	if (GetAsyncKeyState('S') & 0x8000) { m_pos.y -= m_speed; }
-	if (GetAsyncKeyState('A') & 0x8000) { m_pos.x -= m_speed; }
-	if (GetAsyncKeyState('D') & 0x8000) { m_pos.x += m_speed; }
+	if (GetAsyncKeyState(VK_UP) & 0x8000) { m_pos.y += m_speed; }
+	if (GetAsyncKeyState(VK_DOWN) & 0x8000) { m_pos.y -= m_speed; }
+	if (GetAsyncKeyState(VK_LEFT) & 0x8000) { m_pos.x -= m_speed; }
+	if (GetAsyncKeyState(VK_RIGHT) & 0x8000) { m_pos.x += m_speed; }
 	if (m_pos.x < -640 + 32) { m_pos.x = -640 + 32; }
 	else if (m_pos.x > 640 - 32) { m_pos.x = 640 - 32; }
 	if (m_pos.y < -360 + 32) { m_pos.y = -360 + 32; }
 	else if (m_pos.y > 360 - 32) { m_pos.y = 360 - 32; }
+
+	//当たり判定　プレイヤー VS 敵
+
+	for (auto& obj : m_owner->GetObjList())
+	{
+		if (obj->GetObjType() == ObjectType::Enemy)
+		{
+			// 対象の座標（ベクトル） - 自分の座標（ベクトル） = 対象へのベクトル（矢印）
+			Math::Vector3 v;
+			v = obj->GetPos() - m_pos;
+
+			//球判定
+			if (v.Length() < 64.0f)
+			{
+				//Hit時の処理を行う
+				obj->OnHit();
+			}
+		}
+	}
+
 	m_bullet->SetPlayerPos(m_pos);
 	m_bullet->Action();
 }

@@ -1,8 +1,9 @@
 #pragma once
 
+
 class PlayerBullet;
 
-class Player
+class Player //: public BaseObject
 {
 public:
 
