@@ -23,23 +23,6 @@ void Player::Action()
 
 	//当たり判定　プレイヤー VS 敵
 
-	for (auto& obj : m_owner->GetObjList())
-	{
-		if (obj->GetObjType() == ObjectType::Enemy)
-		{
-			// 対象の座標（ベクトル） - 自分の座標（ベクトル） = 対象へのベクトル（矢印）
-			Math::Vector3 v;
-			v = obj->GetPos() - m_pos;
-
-			//球判定
-			if (v.Length() < 64.0f)
-			{
-				//Hit時の処理を行う
-				obj->OnHit();
-			}
-		}
-	}
-
 	m_bullet->SetPlayerPos(m_pos);
 	m_bullet->Action();
 }

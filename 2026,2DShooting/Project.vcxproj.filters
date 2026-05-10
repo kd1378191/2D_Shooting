@@ -76,6 +76,9 @@
     <Filter Include="Src\Application\Scene\ScoreScene">
       <UniqueIdentifier>{e5e6fce0-92cc-497a-8042-9273d4f14e14}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Hit">
+      <UniqueIdentifier>{602c5d1c-3e71-407d-afe2-5c03eac413ba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -168,9 +171,6 @@
     <ClInclude Include="..\Library\strconv.h">
       <Filter>Library</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h">
-      <Filter>Src\Application\Scene\GameScene</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Application\Object\Enemy\Enemy.h">
       <Filter>Src\Application\Object\Enemy</Filter>
     </ClInclude>
@@ -197,6 +197,15 @@
     </ClInclude>
     <ClInclude Include="Src\Application\Scene\ScoreScene\ScoreScene.h">
       <Filter>Src\Application\Scene\ScoreScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Hit\Hit.h">
+      <Filter>Src\Application\Object\Hit</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Hit\BaseObject.h">
+      <Filter>Src\Application\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h">
+      <Filter>Src\Application\Scene\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -260,9 +269,6 @@
     <ClCompile Include="src\System\Window\KdGameWindow.cpp">
       <Filter>Src\Application\System\Window</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp">
-      <Filter>Src\Application\Scene\GameScene</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Object\Enemy\Enemy.cpp">
       <Filter>Src\Application\Object\Enemy</Filter>
     </ClCompile>
@@ -289,6 +295,15 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Scene\ScoreScene\ScoreScene.cpp">
       <Filter>Src\Application\Scene\ScoreScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Hit\Hit.cpp">
+      <Filter>Src\Application\Object\Hit</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Hit\BaseObject.cpp">
+      <Filter>Src\Application\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp">
+      <Filter>Src\Application\Scene\GameScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

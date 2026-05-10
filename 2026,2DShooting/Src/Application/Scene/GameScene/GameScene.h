@@ -8,13 +8,13 @@ class Enemy;
 
 class GameScene : public BaseScene
 {
-	public:
-	GameScene(){ Init(); }
+public:
+	GameScene() { Init(); }
 	~GameScene() { Release(); }
 	void Init()override;
 	void Update()override;
 	void Draw()override;
-	
+
 
 private:
 
@@ -33,7 +33,7 @@ private:
 	Player* m_player;
 	Enemy* m_enemy;
 	static const int m_enemyNum = 5;
-	
+
 
 
 };
